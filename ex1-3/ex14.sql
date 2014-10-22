@@ -1,4 +1,4 @@
-
+BEGIN;
 /* changes to people*/
 ALTER TABLE person ADD COLUMN dead INTEGER;
 ALTER TABLE person ADD COLUMN phone_number INTEGER;
@@ -19,3 +19,5 @@ REPLACE INTO pet (id, name, breed, age, dead, dob, purchase_on, parent)
 SELECT * FROM person;
 
 SELECT * FROM pet WHERE purchase_on >= 01-02-2001;
+
+ROLLBACK;
